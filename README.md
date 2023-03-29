@@ -1,3 +1,7 @@
+# Accordion
+![Screenshot (9)](https://user-images.githubusercontent.com/79044490/228449653-5a509ce4-c8db-4cae-a38f-a60c988941e4.png)
+![Screenshot (10)](https://user-images.githubusercontent.com/79044490/228449675-a715d501-5551-4a2b-a111-f03329b4b6a4.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
