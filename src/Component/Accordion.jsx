@@ -70,8 +70,6 @@ function Accordion(props) {
                     )}
                     </div>
                   </div>
-           
-    
       );
 }
 
