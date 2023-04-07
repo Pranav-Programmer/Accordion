@@ -1,8 +1,29 @@
 import React from 'react';
 import Accordion from './Accordion';
 import {MDBRow} from 'mdb-react-ui-kit';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+  insideApp:{
+    color: '#000', 
+    marginTop: '1rem', 
+    textAlign:'center'
+  },
+  custom:{
+    backgroundColor: '#0000ff', 
+    margin: '3% 7%', 
+    padding:'40px', 
+    borderRadius: '10px', 
+    width: '80%'
+  },
+  FAQ_Text:{
+    color: 'white',
+    marginTop: '-1rem'
+  }
+}));
 
 function AccordionCard() {
+  const classes = useStyles();
     const accordionData = [
         {id: 1,      
         title: 'Is this a good product?',      
@@ -20,13 +41,12 @@ function AccordionCard() {
 
   return (
     <div className="App">
-        <h2 style={{ color: '#000', marginTop: '1rem', textAlign:'center' }}>Project 2: FAQ/Accordion</h2>
+        <h2 className={classes.insideApp}>Project 2: FAQ/Accordion</h2>
           <MDBRow className="mb-4">
             <div
-              className="shadow-1-strong"
-              style={{ backgroundColor: '#0000ff', margin: '3% 7%', padding:'40px', borderRadius: '10px', width: '80%' }}
+              className={`${classes.custom} shadow-1-strong`}
             >
-              <h4 style={{ color: 'white', marginTop: '-1rem' }}>Frequently Asked Questions</h4>
+              <h4 className={classes.FAQ_Text}>Frequently Asked Questions</h4>
             {accordionData.map((data) => (
                 <Accordion key={data.id} title={data.title} content={data.content} />
             ))}
